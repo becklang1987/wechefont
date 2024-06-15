@@ -1,0 +1,13 @@
+<!--pages/network/network.wxml-->
+<view class="region_container"></view>
+    <button class="Site_btn_container" bindtap="getSiteList">
+        <image src="/images/SG.jpg" class="Site_btn_image" />
+        <text class="Site_btn_text">获取站点列表</text>
+    </button>
+<button type="primary "wx:for ="{{siteList}}"
+ wx:for-item="siteName" 
+ wx:key="index" 
+ bindtap="getDevicesBySiteName"
+ data-location="{{siteName}}">
+ {{siteName}}
+ </button>

@@ -1,0 +1,22 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view class="page-section page-section-gap">
+        <view class="sec_box">Secret Digits</view>
+        <slider value="50" name="slider" show-value ></slider>
+      </view>
+          <view >
+              <input-group class="input-group">
+                <label ><input class="user_input_box" celltype="input" type="text" name="username" autocapitalize="none" placeholder="  Your Username"/></label>
+                <label ><input class="user_input_box" celltype="input" type="password" name="password" autocapitalize="none" placeholder="  Your Password"/></label>
+              </input-group>
+          </view>
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit">Tap to Authenticate</button>
+        <button style="margin: 30rpx 0" formType="reset">Reset</button>
+      </view>
+    </form>
+  </view>
+</view>  
+<view>{{msg}}</view>

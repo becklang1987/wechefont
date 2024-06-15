@@ -1,0 +1,31 @@
+.weui-input{ 
+    width: 50%;
+    border: 2rpx solid #ccc;
+    border-radius: 5rpx;
+
+}
+.user_input_box{
+display: flex;
+margin-bottom: 10rpx;
+height: 80rpx;
+flex-direction: column ;
+border-color: #1235c2;
+border: #2418c756 solid 6rpx;
+border-radius: 20rpx;
+
+}
+.sec_box{
+margin-top: 100rpx;
+width: fit-content;
+height: 50rpx;
+border-top: #1235c2;
+border-top-style: solid;
+border-top-width: 100%; 
+border-bottom: #1235c2;
+border-bottom-style: solid;
+border-bottom-width: 100%;
+border-radius: 20rpx;
+margin-left: 250rpx;
+font-weight: 200;
+font-size: larger;
+}

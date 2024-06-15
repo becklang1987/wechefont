@@ -1,0 +1,95 @@
+/* pages/network/configuration/configugration.wxss */
+.tips {
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #158ab8b5;
+}
+.form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #158ab8b5;  /* 两列 */
+}
+.form1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #158ab8b5;  /* 两列 */
+}
+.cmdInput {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.btn{
+    width: 100%;
+    height:fit-content;
+    line-height: 1.5;
+    background-color: #349a4c96;
+    color: #FFFFFF;
+}
+.btn:active{
+    background-color: #349a4c;
+    
+}
+.cmd-box1{
+    color: green;
+    border: 2rpx solid #349a4c;
+    margin-bottom: 3rpx;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: black;
+    height: 100rpx;
+}
+.cmd-box-sub{
+    height: 100rpx;}
+.cmd-box2{
+    color: green;
+    border: 2rpx solid #349a4c;
+    margin-bottom: 3rpx;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: black;
+    height: auto;
+}
+
+.params{
+    color: green;
+    border: 2rpx solid #349a4c;
+    margin-bottom: 3rpx;
+    border-left: none;
+    border-right: none;
+}
+.btn1{
+    width: 100%;
+    height:fit-content;
+    line-height: 1.5;
+    background-color: #349a4c96;
+    color: #FFFFFF;
+    border-radius: none;
+}
+.btn1:active{
+    background-color: #349a4c;}
+.scrollable-textarea {
+    width: 100%;
+    height: 200rpx; /* 你可以根据需要调整高度 */
+    resize: none;
+    overflow-y: scroll; /* 确保 Y 轴可以滚动 */
+    display: block;
+    box-sizing: border-box;
+      }
+.scrollable-textarea2 {
+    height:900rpx; /* 你可以根据需要调整高度 */
+    width: 100%;
+    resize: none;
+    overflow-y: scroll; /* 确保 Y 轴可以滚动 */
+      }
+.cmd-box3{
+    color: green;
+    border: 2rpx solid #349a4c;
+    margin-bottom: 3rpx;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: black;
+    }

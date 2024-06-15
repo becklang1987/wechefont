@@ -1,0 +1,27 @@
+/* pages/network/devicelist/devicelist.wxss */
+.hostname-btn {
+  font-size: 30rpx;
+  color: #FFFFFF;
+  background-color: #158ab8b5;
+  font-family: Comic Sans MS;
+}
+.hostname-btn:active {
+  background-color: #15b8469b;
+}
+.device-info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3,auto);
+  align-items: center;
+  font-size: 28rpx;
+  color: #158ab8b5;
+  font-family: Comic Sans MS;
+ 
+}
+.device-info { 
+    border:  1rpx solid #158ab8b5;
+    align-items: center;
+
+}
+
+

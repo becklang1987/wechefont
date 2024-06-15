@@ -1,0 +1,56 @@
+<!--pages/network/configuration/configugration.wxml-->
+<view  class="tips">You Are Configuring {{hostname}}</view>
+
+<view class="tips">
+Enter Commands Or Tap to Start Troubleshooting
+</view>
+<view class="form">
+    <button type="button" class="btn" data-cmd="ping" bindtap="cmdTap">Ping</button>
+    <button type="button" class="btn" data-cmd="traceroute" bindtap="cmdTap">Trace</button>
+    <button type="button" class="btn" data-cmd="show" bindtap="cmdTap">Show</button>
+    <button type="button" class="btn" data-cmd="running" bindtap="cmdTap">Run</button>
+    <button type="button" class="btn" data-cmd="interface" bindtap="cmdTap"> Int</button>
+    <button type="button" class="btn" data-cmd="GigabitEthernet" bindtap="cmdTap">GigaE</button>
+    <button type="button" class="btn" data-cmd="Ethernet" bindtap="cmdTap">Ethernet</button>
+    <button type="button" class="btn" data-cmd="TenGigabitEthernet" bindtap="cmdTap">TenGiga</button>
+    <button type="button" class="btn" data-cmd="lookback" bindtap="cmdTap">Loopback</button>
+    <button type="button" class="btn" data-cmd="vlan" bindtap="cmdTap">Vlan</button>
+    <button type="button" class="btn" data-cmd="| section " bindtap="cmdTap">| sec</button>
+    <button type="button" class="btn" data-cmd="ip route" bindtap="cmdTap">ip route</button>
+</view >
+<view class="cmd-box1">
+  <input class="cmd-box-sub" autocapitalize="none" placeholder="Build Your Command for Non-privilege Mode" value="{{displayCmd}}" confirm-type="done" bindinput="cmdBlur"></input>
+</view>
+<view class="form1">
+<button class="btn1" bindtap="resetTap1">
+  Reset
+</button>
+<button class="btn1" bindtap="sendTap">
+  Send Command
+</button>
+</view>
+<view class="cmd-box2">
+<textarea 
+  class="scrollable-textarea"
+  confirm-type="return"
+  placeholder="Build Your Config-Automaticaly Enter ConfigMode When Sending Config"
+  value="{{displayText}}"
+  autocapitalize="none"
+  bindinput="cmdBlur2">
+</textarea>
+</view>
+<view class="form1">
+<button class="btn1" bindtap="resetTap2">
+  Reset
+</button>
+<button class="btn1" bindtap="sendTap2">
+  Send Config
+</button>
+</view>
+<view class="cmd-box3">
+  Output
+  <textarea readonly="true" class="scrollable-textarea2"
+    value="{{output}}"
+    maxlength="-1">
+  </textarea>
+</view>

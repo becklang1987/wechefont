@@ -1,0 +1,14 @@
+<view wx:for="{{devicelist}}" wx:key="index" wx:for-index='idx' wx:for-item="info">
+    <button class="hostname-btn" bindtap="navigateToConfiguration" data-hostname="{{info.Device}}">
+        {{info.Device}}
+      </button>
+      <view class="device-info-container">
+        <text class='device-info'>Location</text>
+        <text class='device-info'>{{info.Location}}</text>
+        <text class='device-info'> SN</text>
+        <text class='device-info'> {{info.SN}}</text>
+        <text class='device-info'>Model</text>
+        <text class='device-info'>{{info.model}}</text>
+    </view >
+
+</view>
