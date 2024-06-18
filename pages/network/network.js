@@ -3,17 +3,38 @@
 
 Page({
   data: {
-    siteList: []
+    siteList: [],
+    user:null,
+    username:'',
+    sid:'',
+    cookie:null
+  },
+  onLoad: function(options) {
+    // 获取全局数据
+    const app = getApp();
+    this.setData({
+      user: app.globalData.user,
+      sid: app.globalData.sid,
+      username: app.globalData.username,
+      cookie: app.globalData.cookie
+
+    });
+    console.log(this.data.user);
+    console.log(this.data.sid);
+    console.log(this.data.username);
   },
   getSiteList: function() {
+    console.log("开始请求站点列表...cookie: " + this.data.cookie);
     wx.request({
       url: 'http://192.168.1.249:5002/siteList',
       method: 'GET',
       header: {
-        'content-type': 'application/json'
+        'Content-type': 'application/json',
+        'Cookie': this.data.cookie
       },
       data: { 'region': "APAC" },
       success: (res) => {
+        console.log(this.data.cookie); // 打印请求结果
         console.log(res.data.siteList); // 打印请求结果
 
         // 使用 this.setData 更新 siteList 数据，触发页面重新渲染

@@ -1,22 +1,9 @@
 <!--pages/home/home.wxml-->
-<view class="statement_box">
-  <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
-</view>
-<view class="section">
-  <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
-</view>
-<view class="section">
-  <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
-</view>
-<view class="section">
-  <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
-  <view class="btn-area">
-    <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+<button bindtap="bindButtonTap" class="default_btn">使得输入框获取焦点</button>
+<view class="container">
+  <view class="row" wx:for="{{newList}}" wx:key="index">
+    <view class="default_item">Current Configuration of [{{item.pItem}}] </view>
+    <view class="default_item">{{item.vItem}}</view>
+    <input class="default_input" bindinput="bindInput" type="text" placeholder="Enter Config Here"></input>
   </view>
-</view>
-<view class="section">
-  <form bindsubmit="bindFormSubmit">
-    <textarea placeholder="form 中的 textarea" name="textarea"/>
-    <button form-type="submit"> 提交 </button>
-  </form>
 </view>

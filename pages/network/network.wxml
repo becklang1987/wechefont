@@ -8,6 +8,7 @@
  wx:for-item="siteName" 
  wx:key="index" 
  bindtap="getDevicesBySiteName"
+ class="default_btn"
  data-location="{{siteName}}">
  {{siteName}}
  </button>

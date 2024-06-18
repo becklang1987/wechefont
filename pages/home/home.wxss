@@ -1,1 +1,44 @@
 /* pages/home/home.wxss */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.subItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30%;
+  background-color: brown ;
+  color: white;
+  border: 1px solid black;
+}
+.subItem2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 30%;
+    background-color:rgb(101, 146, 57);
+    color: white;
+    border: 1px solid black;
+  }
+.subItem3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 30%;
+    background-color: brown ;
+    color: white;
+    border: 1px solid black;
+  }
+  .container2 {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1; /* 每列占据相同的宽度 */
+  }
+  
+  .item {
+    background-color: #f0f0f0;
+    text-align: left;
+    height: 50rpx;
+    max-width: 100%;
+    border: 1px solid #ddd;
+  }

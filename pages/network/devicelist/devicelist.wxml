@@ -1,3 +1,11 @@
+<view>
+  <form bindsubmit="setCredentials">
+    <input class="default_input" type="text" placeholder-class="input_placeholder" placeholder="Enter Your SSH Username" autocapitalize="none" name="username" />
+    <input class="default_input" type="password"  placeholder-class="input_placeholder"placeholder="Enter Your SSH Password" autocapitalize="none" name="password" />
+    <button form-type="submit" class="default_btn">Tap To Set Your Credentials</button>
+    <button formType="reset" class="default_btn">Reset</button>
+  </form>
+</view>
 <view wx:for="{{devicelist}}" wx:key="index" wx:for-index='idx' wx:for-item="info">
     <button class="hostname-btn" bindtap="navigateToConfiguration" data-hostname="{{info.Device}}">
         {{info.Device}}

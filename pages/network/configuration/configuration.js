@@ -12,7 +12,9 @@ Page({
     displayText: '',
     output: '',
     displayCmd:'',
-    showInput:''
+    showInput:'',
+    username: '',
+    password: ''
   },
   bindPickerChange: function(e) {
     console.log('picker 发生选择改变，携带值为', e.detail.value);
@@ -24,13 +26,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    const app= getApp();
     this.setData({
-      hostname: options.hostname
+      hostname: options.hostname,
+      username: app.globalData.network_ssh_username,
+      password: app.globalData.network_ssh_password
     });
-    const username = wx.getStorageSync('username');
-    const password = wx.getStorageSync('password');
-    console.log(username);
-    console.log(password);
+    console.log(this.data.username);
+    console.log(this.data.password);
     console.log(this.data.hostname);
   },
   cmdTap: function(e) { 
@@ -66,8 +69,8 @@ Page({
       wx.request({
         url: 'http://192.168.1.249:5010/show',
         data: {
-          username: wx.getStorageSync('username'),
-          password: wx.getStorageSync('password'),
+          username: this.data.username,
+          password: this.data.password,
           hostname: this.data.hostname,
           command: this.data.displayCmd
         },
@@ -105,8 +108,8 @@ Page({
     wx.request({
       url: 'http://192.168.1.249:5010/show',
       data: {
-        username: wx.getStorageSync('username'),
-        password: wx.getStorageSync('password'),
+        username: this.data.username,
+        password: this.data.password,
         hostname: this.data.hostname,
         config: this.data.displayText
       },
