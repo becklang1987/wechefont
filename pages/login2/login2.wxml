@@ -3,9 +3,9 @@
 
 <form form-type="default" bindsubmit="submit">
 <view class="container1">
-<button class="default_item1">---------[Item]--------</button>
-<button class="default_item2">Item</button>
-<input class="default_input" placeholder-class="input_placeholder" placeholder="12312312">item</input>
+<view class="default_item1">---------[Item]--------</view>
+<view  class="default_item2">Item</view>
+<input class="default_input" placeholder-class="input_placeholder" placeholder="12312312"></input>
 </view>
 <view class="container2">
 <button class="default_btn" form-type="submit">Submit</button>

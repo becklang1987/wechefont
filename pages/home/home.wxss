@@ -34,3 +34,58 @@
     max-width: 100%;
     border: 1px solid #ddd;
   }
+  .default_input { 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    font-size: large;
+    padding: None;
+    margin: none;
+    text-align: middle;
+    height: 80rpx;
+    border-bottom: #0d8e23 8rpx solid;
+    border-top: #0d8e23 8rpx solid;
+    border-radius: 10rpx;
+    border-radius: none;
+}
+.default_item2{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom:10rpx;
+  background-color: white;
+  color: rgb(217, 62, 31);
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: None;
+  margin: none;
+  text-align: middle;
+  height: auto;
+  line-height: 80rpx;
+  border-radius: none;
+  word-wrap: break-word; /* 自动换行 */
+  word-break: break-all; /* 强制换行 */
+  white-space: pre-wrap; 
+  
+} 
+.default_item1{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom:10rpx;
+  background-color: white;
+  color: rgb(179, 46, 19);
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: None;
+  margin: none;
+  text-align: middle;
+  height: auto;
+  line-height: 80rpx;
+  border-radius: none;
+  word-wrap: break-word; /* 自动换行 */
+  word-break: break-all; /* 强制换行 */
+  white-space: pre-wrap; 
+  
+} 

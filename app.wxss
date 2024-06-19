@@ -13,6 +13,9 @@ page {
     margin: none;
     text-align: middle;
     height: 80rpx;
+    border-bottom: #0d8e23 8rpx solid;
+    border-top: #0d8e23 8rpx solid;
+    border-radius: 50rpx;
     border-radius: none;
 }
 .default_item1{
@@ -30,7 +33,6 @@ page {
     background-color: white;
 } 
 .default_item2{
-    border-bottom: #18b75a 8rpx solid;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -41,10 +43,12 @@ page {
     padding: None;
     margin: none;
     text-align: middle;
-    height: 80rpx;
+    height: auto;
     line-height: 80rpx;
     border-radius: none;
-
+    word-wrap: break-word; /* 自动换行 */
+    word-break: break-all; /* 强制换行 */
+    white-space: pre-wrap; 
 } 
 .default_btn{
     width: 100%;
@@ -65,13 +69,8 @@ page {
 }
 .container1{
     margin-bottom: 10rpx;
-    border-bottom: #1234de 8rpx dotted;
-    border-top:#1234de 8rpx dotted ;
-    border-top-style: double;
-    border-bottom-style: double;
     border-top-width: 100%; 
     border-bottom-width: 100%;
-    border-radius: 20rpx;
 }
 .container2{
     display: flex;

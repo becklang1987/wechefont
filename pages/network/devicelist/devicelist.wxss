@@ -23,5 +23,16 @@
     align-items: center;
 
 }
-
+.default_input2 { 
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: black;
+  font-size: large;
+  padding: None;
+  margin: none;
+  height: 60rpx;
+  border-radius: none;
+  border-bottom: #18b75a 8rpx solid;
+}
 
