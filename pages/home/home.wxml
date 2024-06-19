@@ -1,9 +1,9 @@
 <!--pages/home/home.wxml-->
 <button bindtap="bindButtonTap" class="default_btn">使得输入框获取焦点</button>
-<view class="container">
-  <view class="row" wx:for="{{newList}}" wx:key="index">
-    <view class="default_item">Current Configuration of [{{item.pItem}}] </view>
-    <view class="default_item">{{item.vItem}}</view>
-    <input class="default_input" bindinput="bindInput" type="text" placeholder="Enter Config Here"></input>
+<view>
+  <view class="container1" wx:for="{{newList}}" wx:key="index">
+    <view class="default_item1">-------[{{item.pItem}}]-------</view>
+    <view class="default_item2">{{item.vItem}}</view>
+    <input class="default_input" bindinput="bindInput" type="text" placeholder-class="input_placeholder"placeholder="Enter Config Here"></input>
   </view>
 </view>

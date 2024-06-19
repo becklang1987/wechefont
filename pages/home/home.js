@@ -19,7 +19,7 @@ Page({
     console.log('globaCookie is '+getApp().globalData.cookie)
     var that = this;
     wx.request ({
-      url: 'https://167e-103-170-26-63.ngrok-free.app/get_user',
+      url: 'https://81d8-240e-39a-edf-bc80-d00a-42c-f1ff-5d60.ngrok-free.app/get_user',
       method: 'GET',
       header: {
         'Content-type': 'application/json',

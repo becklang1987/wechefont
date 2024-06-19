@@ -1,6 +1,14 @@
 <!--pages/index/index.wxml-->
-<view class="container">
   <button class="default_btn" bindtap="login">Login With Your Enterprise Account</button>
-</view>
-<button class="default_item">Item</button>
+
+<form form-type="default" bindsubmit="submit">
+<view class="container1">
+<button class="default_item1">---------[Item]--------</button>
+<button class="default_item2">Item</button>
 <input class="default_input" placeholder-class="input_placeholder" placeholder="12312312">item</input>
+</view>
+<view class="container2">
+<button class="default_btn" form-type="submit">Submit</button>
+<button class="default_btn" form-type="reset">Reset</button>
+</view>
+</form>

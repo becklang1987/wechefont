@@ -1,8 +1,4 @@
 /* pages/home/home.wxss */
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-}
 .subItem {
   display: grid;
   grid-template-columns: 1fr;
@@ -27,10 +23,6 @@
     color: white;
     border: 1px solid black;
   }
-  .container2 {
-    display: flex;
-  }
-  
   .column {
     flex: 1; /* 每列占据相同的宽度 */
   }

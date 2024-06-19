@@ -29,7 +29,7 @@ Page({
   },
  getCookies: function(e) {
   wx.request ({
-    url:'https://167e-103-170-26-63.ngrok-free.app/get_cookie',
+    url:'https://81d8-240e-39a-edf-bc80-d00a-42c-f1ff-5d60.ngrok-free.app/get_cookie',
     method:'POST',
     data:{
       'sid':this.data.sessionID

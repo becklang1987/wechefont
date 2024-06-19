@@ -3,13 +3,10 @@ page {
     background-color:rgb(255, 255, 255);
 
 }
-.default_input {
-    border-bottom: #1234de 8rpx solid;
+.default_input { 
     border-top: none;
     border-left: none;
     border-right: none;
-    margin-top: 10rpx;
-    margin-bottom:10rpx;
     color: black;
     font-size: large;
     padding: None;
@@ -18,13 +15,27 @@ page {
     height: 80rpx;
     border-radius: none;
 }
-.default_item{
+.default_item1{
+    display: flex;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+    padding: None;
+    margin: none;
+    height: 60rpx;
+    background-color: white;
+} 
+.default_item2{
     border-bottom: #18b75a 8rpx solid;
     border-top: none;
     border-left: none;
     border-right: none;
-    margin-top: 10rpx;
     margin-bottom:10rpx;
+    background-color: white;
     color: black;
     font-size: large;
     padding: None;
@@ -42,7 +53,6 @@ page {
     border-top-width: 100%; 
     border-bottom: #1235c2;
     border-bottom-style: solid;
-    border-bottom-width: 100%;
     border-radius: 20rpx;
     font-weight: 400;
     background-color: white;
@@ -52,4 +62,17 @@ page {
     color: black;
     font-size:large;
     font-weight: 400;
+}
+.container1{
+    margin-bottom: 10rpx;
+    border-bottom: #1234de 8rpx dotted;
+    border-top:#1234de 8rpx dotted ;
+    border-top-style: double;
+    border-bottom-style: double;
+    border-top-width: 100%; 
+    border-bottom-width: 100%;
+    border-radius: 20rpx;
+}
+.container2{
+    display: flex;
 }
