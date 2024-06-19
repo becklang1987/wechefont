@@ -1,22 +1,18 @@
 page {
     height: 100%;
-    background-color:rgb(255, 255, 255);
+    background-color:#FFF;
 
 }
 .default_input { 
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    color: black;
-    font-size: large;
-    padding: None;
-    margin: none;
-    text-align: middle;
-    height: 80rpx;
-    border-bottom: #0d8e23 8rpx solid;
-    border-top: #0d8e23 8rpx solid;
-    border-radius: 50rpx;
-    border-radius: none;
+    display: flex;
+    height: 38px;
+    padding: 4rpx 16rpx;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 3rpx solid rgb(111, 190, 131);
+    background:#FFF;
 }
 .default_item1{
     display: flex;
@@ -33,35 +29,41 @@ page {
     background-color: white;
 } 
 .default_item2{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin-bottom:10rpx;
-    background-color: white;
-    color: black;
-    font-size: large;
-    padding: None;
-    margin: none;
-    text-align: middle;
-    height: auto;
-    line-height: 80rpx;
-    border-radius: none;
+    display: flex;
+    width: 100%;
+    height: 47px;
+    justify-content: center;
+    align-items: center;
+    color: var(--Black, #111113);
+    /* Body */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
     word-wrap: break-word; /* 自动换行 */
     word-break: break-all; /* 强制换行 */
     white-space: pre-wrap; 
 } 
 .default_btn{
+    display: flex;
     width: 100%;
-    border-top: #1235c2;
-    border-top-style: solid;
-    border-top-width: 100%; 
-    border-bottom: #1235c2;
-    border-bottom-style: solid;
-    border-radius: 20rpx;
+    height: 47px;
+    justify-content: center;
+    align-items: center;
+    color: var(--Black, #111113);
+    /* Body */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 400;
-    background-color: white;
-    font-size: larger;
+    line-height: 140%; /* 22.4px */
+    box-shadow: 6px 6px 6px 0px rgba(7, 119, 92, 0.35);
 } 
+.default_btn:active{
+    background-color: rgb(111, 190, 131);}
+.default_btn2:active{
+    background-color: rgb(111, 190, 131);}
 .input_placeholder{
     color: black;
     font-size:large;
@@ -69,8 +71,10 @@ page {
 }
 .container1{
     margin-bottom: 10rpx;
+    
     border-top-width: 100%; 
     border-bottom-width: 100%;
+    box-shadow: 6px 6px 6px 0px rgba(7, 119, 92, 0.35);
 }
 .container2{
     display: flex;

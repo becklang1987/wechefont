@@ -1,68 +1,30 @@
 /* pages/home/home.wxss */
-.subItem {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 30%;
-  background-color: brown ;
-  color: white;
-  border: 1px solid black;
-}
-.subItem2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 30%;
-    background-color:rgb(101, 146, 57);
-    color: white;
-    border: 1px solid black;
-  }
-.subItem3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 30%;
-    background-color: brown ;
-    color: white;
-    border: 1px solid black;
-  }
-  .column {
-    flex: 1; /* 每列占据相同的宽度 */
-  }
-  
-  .item {
-    background-color: #f0f0f0;
-    text-align: left;
-    height: 50rpx;
-    max-width: 100%;
-    border: 1px solid #ddd;
-  }
   .default_input { 
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    color: black;
-    font-size: large;
-    padding: None;
-    margin: none;
-    text-align: middle;
-    height: 80rpx;
-    border-bottom: #0d8e23 8rpx solid;
-    border-top: #0d8e23 8rpx solid;
-    border-radius: 10rpx;
-    border-radius: none;
+    display: flex;
+    height: 38px;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 16px;
+
+    align-self: stretch;
 }
 .default_item2{
+  display:flex;
+  justify-content: space-between;
+  align-items: left;
   border-top: none;
   border-left: none;
   border-right: none;
-  margin-bottom:10rpx;
-  background-color: white;
+  margin-bottom:5rpx;
+  background-color: rgba(19, 169, 109, 0.653);
   color: rgb(217, 62, 31);
-  font-size: large;
+  font-size: small;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: None;
   margin: none;
-  text-align: middle;
+  text-align: left;
   height: auto;
-  line-height: 80rpx;
+  line-height: 50rpx;
   border-radius: none;
   word-wrap: break-word; /* 自动换行 */
   word-break: break-all; /* 强制换行 */
@@ -82,10 +44,107 @@
   margin: none;
   text-align: middle;
   height: auto;
-  line-height: 80rpx;
+  line-height: 50rpx;
   border-radius: none;
   word-wrap: break-word; /* 自动换行 */
   word-break: break-all; /* 强制换行 */
   white-space: pre-wrap; 
   
 } 
+.default_btn1{
+  width: 100%;
+  border-top: #1235c2;
+  border-top-style: solid;
+  border-top-width: 100%; 
+  border-bottom: #1235c2;
+  border-bottom-style: solid;
+  border-radius: 20rpx;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: white;
+  line-height: 60rpx;
+  font-size: larger;
+} 
+
+.container1{
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  align-items:flex-start;
+  justify-content: flex-start;
+  margin-bottom: 10rpx;
+  margin: auto;
+  font-size: small;
+  margin-top: 20rpx;
+  line-height: 30rpx;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: 0px 0px 2px 2px rgba(216, 224, 223, 0.581);
+  border-radius: 8rpx;
+  word-wrap: break-word;
+  word-break: break-all; 
+}
+.item-view:nth-child(2){
+  border-bottom: 3rpx solid #a3a6b2;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.item-view:first-child{
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.btn-view{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: small;
+  line-height: 50rpx;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 20rpx;
+  padding: 5px;
+}
+.icon-container {
+  margin-left: 5px;
+}
+.input-text {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+.search-icon {
+  display: inline-block;
+}
+.default_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40rpx;
+  line-height: 30rpx;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  border-radius: 12rpx;
+}
+.default_btn2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40rpx;
+  line-height: 30rpx;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 30rpx;
+  font-size: small;
+}
+.btn-view:active{
+  background-color: rgb(111, 190, 131);
+}

@@ -1,9 +1,54 @@
 <!--pages/home/home.wxml-->
-<button bindtap="bindButtonTap" class="default_btn">使得输入框获取焦点</button>
-<view >
-  <view class="container1" wx:for="{{newList}}" wx:key="index">
-    <view class="default_item1">------- Property:{{item.pItem}} -----</view>
-    <view class="default_item2">Config: {{item.vItem}}</view>
-    <input hidden="{{item.pItem==='id'}}" class="default_input" bindinput="bindInput" type="text" placeholder-class="input_placeholder" placeholder="Enter Config: {{item.pItem}}"></input>
+<view class="input-container">
+<input type="text" placeholder="Search for users" class="input-text" bindconfirm="getInfo_Of_User" name="displayName" />
+ <view class="icon-container">
+    <icon class="search-icon" type="search" size="20" color="#999"></icon>
   </view>
+</view>
+<view >
+  <view class="container1" wx:for="{{newList}}" wx:for-index="key" wx:for-item="item">
+    <view class="item-view"loading="{{loading}}" disabled="{{disabled}}">
+    User: {{item.displayName}}
+    <button class="btn-view" bindtap="getInfo" data-id="{{item.id}}">Get Details</button>
+    </view> 
+    <view class="item-view"></view>
+    <view class="item-view">Deparment:{{item.department}}</view>
+    <view class="item-view">Mail:{{item.mail}}</view>
+    <view class="item-view">PrincipalName:{{item.userPrincipalName}}</view>
+    <view class="item-view">JobTitle:{{item.jobTitle}}</view>
+    <view class="item-view">Location:{{item.officeLocation}}</view>
+    <button class="default_btn">Edit This User</button>
+  </view>
+<button class="default_btn2">Create New User</button>
+</view>
+<view class="input-container">
+<input type="text" placeholder="Search for group" class="input-text" bindconfirm="getInfo_Of_Group" name="GroupName" />
+ <view class="icon-container">
+    <icon class="search-icon" type="search" size="20" color="#999"></icon>
+  </view>
+</view>
+<view >
+  <view class="container1" wx:for="{{newList}}" wx:for-index="key" wx:for-item="item">
+    <view class="item-view"loading="{{loading}}" disabled="{{disabled}}">
+    User: {{item.displayName}}
+    <button class="btn-view" bindtap="getInfo" data-id="{{item.id}}">Get Details</button>
+    </view> 
+    <view class="item-view"></view>
+    <view class="item-view">Deparment:{{item.department}}</view>
+    <view class="item-view">Mail:{{item.mail}}</view>
+    <view class="item-view">PrincipalName:{{item.userPrincipalName}}</view>
+    <view class="item-view">JobTitle:{{item.jobTitle}}</view>
+    <view class="item-view">Location:{{item.officeLocation}}</view>
+    <button class="default_btn">Edit This Group</button>
+  </view>
+<button class="default_btn2">Create New Group</button>
+</view>
+<view class="container1">
+  <view class="notification-view">Messages</view>
+  <view class="notification-view"></view>
+  <text  class="notification-view">This tool is developped by APAC IT Infra Team. Make sure to check the latest news and updates from our team.
+    Current page is design to check and edit users  and groups properties on MS Azure AD.
+    DETELE is not supported in this version and will never be supported.
+  NetDevOps pages are enabled for ServiceDesk Team to get network hardware inventories in locaitons globally.
+  SysDevOps pages are design to configure On-premise Vmware Vsphere servers and still in development. </text>
 </view>
