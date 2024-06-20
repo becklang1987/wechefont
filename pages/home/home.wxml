@@ -1,11 +1,11 @@
 <!--pages/home/home.wxml-->
 <view class="input-container">
-    <input type="text" placeholder="Search for users" class="input-text" bindconfirm="getInfo_Of_User" name="displayName" />
+    <input type="text" placeholder="Search for users" class="input-text" bindconfirm="getInfo_Of_User" name="displayName"xs/>
     <view class="icon-container">
         <icon class="search-icon" type="search" size="20" color="#999"></icon>
     </view>
   </view>
-<view class="cover-view" hidden="{{showOrNot1===false}}"></view>
+<view class="cover-view" hidden="{{showOrNot1===false}}" bindtap="closePopup"></view>
 <view class="popup-container" hidden="{{showOrNot1===false}}">
         <view class="container1" wx:for="{{newList}}" wx:for-index="key" wx:for-item="item">
         <view class="item-view">
@@ -37,12 +37,93 @@
           <view class="info-item-key">Location</view>
           <view class="info-item-value">{{item.officeLocation}}</view>
         </view>
-        <button class="default_btn">Edit This User</button>
-        <button class="default_btn">Get UserDetails</button>
-        <text>"{{newList}}"</text>
+        <view class="info-container">
+          <view class="info-item-key">Manager</view>
+          <view class="info-item-value">{{item.manager}}</view>
         </view>
+        <button class="default_btn">Edit This User</button>
+        <view class="container1">
+            <button class="default_btn" bindtap="getGroupMembership" data-id="{{item.id}}">Get Group Membership</button>
+            <view class="container1" wx:for="{{groupList}}" wx:for-index="key" wx:for-item="item">
+            <view class="item-view"></view>
+            <view class="info-container">
+              <view class="info-item-key">Group Name</view>
+              <view class="info-item-value">{{item.displayName}}</view>
+            </view>
+             <view class="info-container">
+              <view class="info-item-key">Group Info</view>
+              <view class="info-item-value">{{item.description}}</view>
+            </view>
+              <view class="info-container">
+              <view class="info-item-key">Group ID</view>
+              <view class="info-item-value">{{item.id}}</view>
+            </view>
+            <button class="default_btn" bindtap="addUserToGroup" data-id="{{item.id}}" data-action="remove">Remote User From Group</button>
+        </view>
+        <view class="input-container2">
+            <input type="text" placeholder="Search for users" class="input-text2" bindconfirm="searchGroup" name="displayName"/>
+            <view class="icon-container">
+                <icon class="search-icon" type="search" size="20" color="#999"></icon>
+            </view>
+        </view> 
+            <view class="container1" wx:for="{{searchedGroupList}}" wx:for-index="key" wx:for-item="item">
+            <view class="item-view"></view>
+            <view class="info-container">
+              <view class="info-item-key">Group Name</view>
+              <view class="info-item-value">{{item.displayName}}</view>
+            </view>
+             <view class="info-container">
+              <view class="info-item-key">Group Info</view>
+              <view class="info-item-value">{{item.description}}</view>
+            </view>
+              <button class="default_btn" bindtap="addUserToGroup" data-id="{{item.id}}" data-action="add">Add User to Group</button>
+        </view>
+  </view>
+  </view>
 </view>
-<button class="default_btn2">Create New User</button>
+<button class="default_btn2" bindtap="showUserCreationForm">Create New User</button>
+      <form hidden="{{showOrNot2===false}}"class="new-user-container" catchsubmit="formSubmit" catchreset="formReset">
+       <view class="create-user-container">
+          <view class="info-item-key2">Display Name</view>
+          <input class="input-create-user" type="text" name="displayName" placeholder="Enter Display Name" />
+        </view>
+       <view class="create-user-container">
+          <view class="info-item-key2">Mail Nickname</view>
+          <input class="input-create-user" type="text" name="mailNickname" placeholder="Enter Mail Nickname" />
+        </view>
+        <view class="create-user-container">
+          <view class="info-item-key2">Mail</view>
+          <input class="input-create-user" type="text" name="Mail" placeholder="Enter Mail" />
+        </view>
+        <view class="create-user-container">
+          <view class="info-item-key2">User Principal Name</view>
+          <input class="input-create-user" type="text" name="userPrincipalName" placeholder="Enter User Principal Name" />
+        </view>
+        <view class="create-user-container">
+          <view class="info-item-key2">First Name</view>
+          <input class="input-create-user" type="text" name="firstName" placeholder="Enter First Name" />
+        </view>
+        <view class="create-user-container">
+          <view class="info-item-key2">Last Name</view>
+          <input class="input-create-user" type="text" name="lastName" placeholder="Enter Last Name" />
+        </view>
+         <view class="create-user-container">
+          <view class="info-item-key2">Passoword</view>
+          <input class="input-create-user" type="text" name="password" placeholder="Enter Password" />
+        </view>
+        <view class="create-user-container">
+          <view class="info-item-key2">forceChangePasswordNextSignIn</view>
+          <switch name="forceChangePasswordNextSignIn"/>
+        </view>
+        <view class="create-user-container">
+          <view class="info-item-key2">Account Enabled</view>
+          <switch name="accountEnabled"/>
+        </view>
+        <view class="create-user-container">
+        <button class="default_btn2" formType="submit" >Create User</button>
+        <button class="default_btn2" formType="reset" bindtap="showUserCreationForm">Cancel</button>
+        </view>
+      </form>
 <view class="input-container">
 <input type="text" placeholder="Search for group" class="input-text" bindconfirm="getInfo_Of_Group" name="GroupName" />
  <view class="icon-container">
