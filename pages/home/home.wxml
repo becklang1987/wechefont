@@ -1,26 +1,48 @@
 <!--pages/home/home.wxml-->
 <view class="input-container">
-<input type="text" placeholder="Search for users" class="input-text" bindconfirm="getInfo_Of_User" name="displayName" />
- <view class="icon-container">
-    <icon class="search-icon" type="search" size="20" color="#999"></icon>
+    <input type="text" placeholder="Search for users" class="input-text" bindconfirm="getInfo_Of_User" name="displayName" />
+    <view class="icon-container">
+        <icon class="search-icon" type="search" size="20" color="#999"></icon>
+    </view>
   </view>
+<view class="cover-view" hidden="{{showOrNot1===false}}"></view>
+<view class="popup-container" hidden="{{showOrNot1===false}}">
+        <view class="container1" wx:for="{{newList}}" wx:for-index="key" wx:for-item="item">
+        <view class="item-view">
+          <text>User: {{item.displayName}}</text>
+          <button class="btn-view" bindtap="goBack_To_Home" data-id="{{item.id}}">Go back</button>
+        </view> 
+        <view class="item-view"></view>
+        <view class="info-container">
+          <view class="info-item-key">Deparment</view>
+          <view class="info-item-value">{{item.department}}</view>
+        </view>
+        <view class="info-container">
+          <view class="info-item-key">Mail</view>
+          <view class="info-item-value">{{item.mail}}</view>
+        </view>
+        <view class="info-container">
+          <view class="info-item-key">MobilePhone</view>
+          <view class="info-item-value">{{item.mobilePhone}}</view>
+        </view>
+        <view class="info-container">
+          <view class="info-item-key">BusinessPhone</view>
+          <view class="info-item-value">{{item.businessPhones[0]}}</view>
+        </view>
+        <view class="info-container">
+          <view class="info-item-key">JobTitle</view>
+          <view class="info-item-value">{{item.jobTitle}}</view>
+        </view> 
+        <view class="info-container">
+          <view class="info-item-key">Location</view>
+          <view class="info-item-value">{{item.officeLocation}}</view>
+        </view>
+        <button class="default_btn">Edit This User</button>
+        <button class="default_btn">Get UserDetails</button>
+        <text>"{{newList}}"</text>
+        </view>
 </view>
-<view >
-  <view class="container1" wx:for="{{newList}}" wx:for-index="key" wx:for-item="item">
-    <view class="item-view"loading="{{loading}}" disabled="{{disabled}}">
-    User: {{item.displayName}}
-    <button class="btn-view" bindtap="getInfo" data-id="{{item.id}}">Get Details</button>
-    </view> 
-    <view class="item-view"></view>
-    <view class="item-view">Deparment:{{item.department}}</view>
-    <view class="item-view">Mail:{{item.mail}}</view>
-    <view class="item-view">PrincipalName:{{item.userPrincipalName}}</view>
-    <view class="item-view">JobTitle:{{item.jobTitle}}</view>
-    <view class="item-view">Location:{{item.officeLocation}}</view>
-    <button class="default_btn">Edit This User</button>
-  </view>
 <button class="default_btn2">Create New User</button>
-</view>
 <view class="input-container">
 <input type="text" placeholder="Search for group" class="input-text" bindconfirm="getInfo_Of_Group" name="GroupName" />
  <view class="icon-container">
@@ -28,19 +50,6 @@
   </view>
 </view>
 <view >
-  <view class="container1" wx:for="{{newList}}" wx:for-index="key" wx:for-item="item">
-    <view class="item-view"loading="{{loading}}" disabled="{{disabled}}">
-    User: {{item.displayName}}
-    <button class="btn-view" bindtap="getInfo" data-id="{{item.id}}">Get Details</button>
-    </view> 
-    <view class="item-view"></view>
-    <view class="item-view">Deparment:{{item.department}}</view>
-    <view class="item-view">Mail:{{item.mail}}</view>
-    <view class="item-view">PrincipalName:{{item.userPrincipalName}}</view>
-    <view class="item-view">JobTitle:{{item.jobTitle}}</view>
-    <view class="item-view">Location:{{item.officeLocation}}</view>
-    <button class="default_btn">Edit This Group</button>
-  </view>
 <button class="default_btn2">Create New Group</button>
 </view>
 <view class="container1">

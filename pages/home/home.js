@@ -5,7 +5,8 @@ Page({
     cookie:null,
     pList:null,
     vList:null,
-    newList:null
+    newList:null,
+    showOrNot1: false,
     
   },
   onLoad: function (options) {
@@ -17,10 +18,13 @@ Page({
   },
   getInfo_Of_User: function(e) {
     const name=e.detail.value
+    this.setData({
+      showOrNot1:!this.data.showOrNot1
+    });
     console.log(name);
     var that = this;
     wx.request ({
-      url: 'https://81d8-240e-39a-edf-bc80-d00a-42c-f1ff-5d60.ngrok-free.app/get_user',
+      url: 'https://b6a0-240e-39a-edf-bc80-bd26-acca-49dd-3bb2.ngrok-free.app/get_user',
       method: 'GET',
       data: {
         'displayName': name
@@ -45,11 +49,10 @@ Page({
   bindFormSubmit: function(e) {
     console.log(e.detail.value.textarea)
   },
-  getInfo: function(e) {
-    const id = e.currentTarget.dataset.id;
-    console.log(id);
-    wx.navigateTo({
-      url: '/pages/home/users/users?id=' + id
-    })
+  goBack_To_Home: function(e) {
+    this.setData({
+      showOrNot1:!this.data.showOrNot1
+    });
+
   },
 })
