@@ -1,14 +1,10 @@
 <!--pages/index/index.wxml-->
-  <button class="default_btn" bindtap="login">Login With Your Enterprise Account</button>
-
-<form form-type="default" bindsubmit="submit">
-<view class="container1">
-<view class="default_item1">---------[Item]--------</view>
-<view  class="default_item2">Item</view>
-<input class="default_input" placeholder-class="input_placeholder" placeholder="12312312"></input>
-</view>
-<view class="container2">
-<button class="default_btn" form-type="submit">Submit</button>
-<button class="default_btn" form-type="reset">Reset</button>
-</view>
-</form>
+  <button class="login_btn" bindtap="login">Login With Your Enterprise Account</button>
+  <view class="msg_box">
+    <text>Message
+    This tool is developped by APAC IT Infra Team. Make sure to check the latest news and updates from our team.
+    Current page is design to check and edit users and groups properties on MS Azure AD. DETELE is not supported in this version and will never be supported. 
+    NetDevOps pages are enabled for ServiceDesk Team to get network hardware inventories in locaitons globally. 
+    SysDevOps pages are design to configure On-premise Vmware Vsphere servers and still in development.
+    </text>
+  </view>

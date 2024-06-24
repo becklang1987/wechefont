@@ -47,19 +47,18 @@ page {
 } 
 .default_btn{
     display: flex;
-    width: 100%;
-    height: 47px;
     justify-content: center;
     align-items: center;
-    color: var(--Black, #111113);
-    /* Body */
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 22.4px */
-    box-shadow: 6px 6px 6px 0px rgba(7, 119, 92, 0.35);
-} 
+    width: 100%;
+    height: 70rpx;
+    line-height: 30rpx;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    border-radius: 8rpx rgb(111, 190, 131);
+    border:1rpx rgb(111, 190, 131);
+    background: rgba(216, 226, 219, 0.103);
+    box-shadow: 2rpx 2rpx 4rpx 0rpx rgb(111, 190, 131), -2rpx -2rpx 4rpx 0rpx #FFF;
+  }
 .default_btn:active{
     background-color: rgb(111, 190, 131);}
 .default_btn2:active{
